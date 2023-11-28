@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for _co in range(ord('a'), ord('z') + 1):
-    print("{}.format(co(_co)), end='')
+for ar_co in range(ord('a'), ord('z') + 1):
+    print("{}.format(chr(ar_co)), end='')
