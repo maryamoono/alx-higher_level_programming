@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def no_c(my_string):
     p = 0
     new_string = my_string[:]
