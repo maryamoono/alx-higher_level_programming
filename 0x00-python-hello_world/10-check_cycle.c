@@ -1,38 +1,42 @@
 #include "lists.h"
-/*
- * check_cycle - labala
- * @list: lol
- * Return: 0 or 1
+/**
+ * check_cycle - checks a singly linked list has
+ * a cycle in it or not
+ * @list: pointer
+ * Return: 0 if there is no cycle,
+ * 1 if there is a cycle
  */
 int check_cycle(listint_t *list)
 {
-	listint_t = *m;
-	listint_t = *o;
+	listint_t *p2;
+	listint_t *prev;
 
-	m = list;
-	o = list;
-	while (list && m && m->next)
+	p2 = list;
+	prev = list;
+	while (list && p2 && p2->next)
 	{
 		list = list->next;
-		m = m->next;
-		
-		if (list == m)
+		p2 = p2->next->next;
+
+		if (list == p2)
 		{
-			list = o;
-			o = m;
+			list = prev;
+			prev =  p2;
 			while (1)
 			{
-				m = o;
-				while (m->next != list && m->next != o)
+				p2 = prev;
+				while (p2->next != list && p2->next != prev)
 				{
-					m = m->next;
+					p2 = p2->next;
 				}
-				if (m->next == list)
+				if (p2->next == list)
 					break;
+
 				list = list->next;
 			}
 			return (1);
 		}
 	}
+
 	return (0);
 }
