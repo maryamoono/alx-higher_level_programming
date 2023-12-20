@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 This module contains utility functions for handling strings.
 """
